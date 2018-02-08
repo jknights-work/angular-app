@@ -1,0 +1,8 @@
+<h1>{{title}}</h1>
+<p>{{name}}</p>
+
+<courses  [courses]="courses" (_onClicked)="onCourseSelect($event, course)"></courses>
+<authors [authors]="authors" ></authors>
+<course ([ngModel])="course" [course]="course"></course>
+
+

@@ -1,0 +1,7 @@
+<div *ngIf="course">
+    <h1>{{course.title}}</h1>
+    <input type="hidden" [(ngModel)]="course.isFavourite" value="{{course.isFavourite}}"/>
+    <favourite [isFavourite]="course.isFavourite" (onChanges)="onFavouriteChange($event)"></favourite>
+    <p>{{course.name}}</p>
+    <p>{{course.description}}</p>
+</div>

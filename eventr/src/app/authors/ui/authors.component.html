@@ -1,0 +1,11 @@
+<h1>{{title}}</h1>
+<p>{{name}}</p>
+<ul>
+    <input type="text" inputDirective [(ngModel)]="title"/>
+    <li *ngFor="let author of authors">
+        <p>Name : {{author.person.firstName}}</p>
+        <p>Rating : {{author.rating}}
+        <p>Course Ids : <span *ngFor="let course of author.course_ids">{{course}}</span></p> 
+    </li>
+</ul>
+<button (click)="onClick($event)" class="btn btn-default">OK</button>
